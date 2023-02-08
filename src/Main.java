@@ -1,10 +1,12 @@
+
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println(ageAndTemperature(7,30));
-        System.out.println(ageAndTemperature(12,21));
-        System.out.println(ageAndTemperature(23,15));
-        System.out.println(ageAndTemperature(37,0));
-        System.out.println(ageAndTemperature(42,-25));
+        System.out.println(ageAndTemperature(7, 30));
+        System.out.println(ageAndTemperature(12, 21));
+        System.out.println(ageAndTemperature(getRAndomage(), 15));
+        System.out.println(ageAndTemperature(getRAndomage(), 0));
+        System.out.println(ageAndTemperature(getRAndomage(), -25));
     }
 
     public static String ageAndTemperature(int age, double temperature) {
@@ -16,9 +18,16 @@ public class Main {
             return "Можно идти гулять";
         } else {
             return "Оставайтесь дома";
-
         }
 
     }
+
+    public static int getRAndomage() {
+
+        int age = 1 + ((int) (Math.random() * 100));
+        return age;
+    }
+
+
 }
 
